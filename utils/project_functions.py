@@ -1,11 +1,11 @@
 import pandas as pd
-
+from utils import filepaths
 
 def file_range_access(
     x_range,
     y_range=0,
-    folder_path="../Metal_stuff/coil_data/",
-    file_path="../Metal_stuff/CoilData.csv",
+    folder_path=filepaths.PATH_TO_NEW,
+    file_path=filepaths.PATH_TO_BASE_CSV,
 ):
 
     x_range, y_range = (x_range, y_range) if x_range < y_range else (y_range, x_range)
