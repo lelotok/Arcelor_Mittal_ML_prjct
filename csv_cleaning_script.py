@@ -8,7 +8,7 @@ PATH_TO_NEW = "../Cleaned_data/"
 PATH_TO_CSV = "../CoilData.csv"
 
 with open(PATH_TO_CSV) as coil_csv:
-    coil_df = pd.read_csv(coil_csv)
+    coil_df = pd.read_csv(coil_csv, sep=";")
 
 bad_coils = []
 
@@ -47,7 +47,7 @@ for coil in coil_df.coil:
                     write_file.write("Lengthpoints,Values\n")
                     write_file.writelines(lengthpoint + "," + value + "\n" for (lengthpoint, value) in clean_data)
 
-                    os.remove(f"{PATH_TO_OLD}/{coil}B{index}.csv")
+                    os.remove(f"{PATH_TO_OLD}{coil}B{index}.csv")
 
             else:
                 bad_coils.append(coil)
@@ -66,6 +66,6 @@ for coil in bad_coils:
 
 coil_df = coil_df[coil_df.coil.isin(bad_coils) == False]
 
-coil_df.to_csv(PATH_TO_CSV)
+coil_df.to_csv("../CoilData_new.csv")
 
 print(f"Done! {len(bad_coils)} coils removed")
