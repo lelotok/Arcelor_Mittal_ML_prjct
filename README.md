@@ -39,7 +39,7 @@ Our first step was to make the data usable, the way it was stored in the .csv ma
 
 ## Step 3: Labeling the data.
 
-After step 2 we were left with over 50.000 files all with B4 and B5 measurements. Now we had to correctly identify what coils had had a width constriction and which hadn't. To do this we ran the [labeling.py](https://github.com/lelotok/Arcelor_Mittal_ML_prjct/blob/main/labeling_script.py) . This file loops over the CoilData.csv and opens the specific coil B4 & B5 files. It then looks at only the data between 140 and 170 metres, as requested by the client. Since the measuring points aren't at the same lengthpoint for B4 and B5 we try to find the closest matching value for B5. This way we can create a dataframe which compares the width differences between B4 & B5.
+After step 2 we were left with over 50.000 files all with B4 and B5 measurements. Now we had to correctly identify what coils had had a width constriction and which hadn't. To do this we ran the [labeling_script.py](https://github.com/lelotok/Arcelor_Mittal_ML_prjct/blob/main/labeling_script.py) . This file loops over the CoilData.csv and opens the specific coil B4 & B5 files. It then looks at only the data between 140 and 170 metres, as requested by the client. Since the measuring points aren't at the same lengthpoint for B4 and B5 we try to find the closest matching value for B5. This way we can create a dataframe which compares the width differences between B4 & B5.
 
 The script then adds columns to the original CoilData.csv and labels, depending on parameters, whether a coil has had a constriction (True) or not (False). 
 
