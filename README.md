@@ -24,6 +24,10 @@ With our model, we want to predict before a steel slab starts the production pro
 1. Clone the repo
 2. Install the libraries
 
+## Step 0: Set filepaths
+
+Before starting the scripts or trying the models, make sure your filepaths are correct. Use the [filepath.py](https://github.com/lelotok/Arcelor_Mittal_ML_prjct/blob/main/labeling_script.py) and follow the steps inside.
+
 ## Step 1: Exploring data.
 
 For this we were given several .csv files. One was an overview of all the coils (CoilData) and several parameters such as Width, material composition, temperature, hardness,...
@@ -38,3 +42,7 @@ Our first step was to make the data usable, the way it was stored in the .csv ma
 After step 2 we were left with over 50.000 files all with B4 and B5 measurements. Now we had to correctly identify what coils had had a width constriction and which hadn't. To do this we ran the [labeling.py](https://github.com/lelotok/Arcelor_Mittal_ML_prjct/blob/main/labeling_script.py) . This file loops over the CoilData.csv and opens the specific coil B4 & B5 files. It then looks at only the data between 140 and 170 metres, as requested by the client. Since the measuring points aren't at the same lengthpoint for B4 and B5 we try to find the closest matching value for B5. This way we can create a dataframe which compares the width differences between B4 & B5.
 
 The script then adds columns to the original CoilData.csv and labels, depending on parameters, whether a coil has had a constriction (True) or not (False). 
+
+## Step 4: Testing models
+
+After labeling the data to True and False, we started testing several models. These can be found [here](https://github.com/lelotok/Arcelor_Mittal_ML_prjct). The models gave back different results and you can try them out for yourself. The models that gave the most satisfactory result for us were #1 SVC and #2 SGDClassifier. Be warned that SVC runs quite slow but gives a more accurate result.
