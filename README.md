@@ -1,5 +1,5 @@
 # Project for ArcelorMittal: Predicting width constrictions during hot rolling.
-### [Bertram D'Hooghe](https://github.com/BertramDHooge), [Lelo Tokwaulu](https://github.com/lelotok) and [Kristof Vandewynckel](https://github.com/KristofVandewynckel)
+### [Bertram D'Hooge](https://github.com/BertramDHooge), [Lelo Tokwaulu](https://github.com/lelotok) and [Kristof Vandewynckel](https://github.com/KristofVandewynckel)
 --------------------------------------------------------------------------------------
 
 ## Introduction
