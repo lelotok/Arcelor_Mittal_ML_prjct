@@ -1,5 +1,6 @@
 CoilData.csv
 SignalExport/
+utils/filepaths.py
 
 # gitignore template for Jupyter Notebooks
 # website: http://jupyter.org/
