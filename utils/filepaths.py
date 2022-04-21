@@ -1,4 +1,4 @@
-PATH_TO_OLD = "/home/bertram/Documents/BeCode/becode_projects/Metal_stuff/SignalExport/"
-PATH_TO_NEW = "/home/bertram/Documents/BeCode/becode_projects/Metal_stuff/coil_data/"
-PATH_TO_BASE_CSV = "/home/bertram/Documents/BeCode/becode_projects/Metal_stuff/CoilData.csv"
-PATH_TO_LABELED_CSV = "/home/bertram/Documents/BeCode/becode_projects/Metal_stuff/CoilData_labeled.csv"
+PATH_TO_OLD = "" ## Path to the uncleaned folder
+PATH_TO_NEW = "" ## Path to the cleaned folder (folder needs to exist and files will be created or overridden by csv_cleaning_script.py)
+PATH_TO_BASE_CSV = "" ## Path to the unlabeled coil data
+PATH_TO_LABELED_CSV = "" ## Path to the labeled coil data (this file will be created or overridden by labeling.py)
