@@ -18,6 +18,7 @@ With our model, we want to predict before a steel slab starts the production pro
 - Pandas
 - Numpy
 - Sklearn
+- Imblearn
 
 ## Installation
 
@@ -35,7 +36,7 @@ The others were specifc measurements of each coil. At about every 30 cm a measur
 
 ## Step 2: Preparing the data.
 
-Our first step was to make the data usable, the way it was stored in the .csv made immediate usage impossible and it needed to be rearranged. For this we created the [csv_cleaning_script.py.](https://github.com/lelotok/Arcelor_Mittal_ML_prjct/blob/main/csv_cleaning_script.py) . This script loops over all the coils in the CoilData .csv , arranges all the data so it's immediately readable for a Pandas DataFrame. It furthermore removed any files that did not have a B4 or B5 counterpart and checked if it was present in the CoilData overview. It also looked at the values inside the coil file and if they were faulty (eg. all zeroes, a width of 1mm,...) they were also removed.
+Our first step was to make the data usable, the way it was stored in the .csv made immediate usage impossible and it needed to be rearranged. For this we created the [csv_cleaning_script.py.](https://github.com/lelotok/Arcelor_Mittal_ML_prjct/blob/main/csv_cleaning_script.py) . This script loops over all the coils in the CoilData .csv and arranges all the data so it's immediately readable for a Pandas DataFrame. It furthermore removed any files that did not have a B4 or B5 counterpart and checked if it was present in the CoilData overview. It also looked at the values inside the coil file and if they were faulty (eg. all zeroes, no data,...) they were also removed.
 
 ## Step 3: Labeling the data.
 
