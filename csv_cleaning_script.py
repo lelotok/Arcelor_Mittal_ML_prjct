@@ -3,7 +3,6 @@ import os
 import pandas as pd
 from utils import filepaths
 
-
 with open(filepaths.PATH_TO_BASE_CSV) as coil_csv:
     coil_df = pd.read_csv(coil_csv)
 
@@ -44,7 +43,7 @@ for coil in coil_df.coil:
                     write_file.write("Lengthpoints,Values\n")
                     write_file.writelines(lengthpoint + "," + value + "\n" for (lengthpoint, value) in clean_data)
 
-                    os.remove(f"{filepaths.PATH_TO_OLD}/{coil}B{index}.csv")
+                    os.remove(f"{filepaths.PATH_TO_OLD}{coil}B{index}.csv")
 
             else:
                 bad_coils.append(coil)
@@ -54,7 +53,7 @@ for coil in coil_df.coil:
             bad_coils.append(coil)
             break
 
-final_coils = os.listdir(PATH_TO_NEW)
+final_coils = os.listdir(filepaths.PATH_TO_NEW)
 
 
 for coil in bad_coils:

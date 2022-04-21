@@ -1,12 +1,12 @@
 import pandas as pd
-import nunmpy as np
+import numpy as np
 from utils import filepaths
 
 # Opening the files
 df = pd.read_csv(filepaths.PATH_TO_BASE_CSV)
 coil_list = df.coil
 
-for coil in file_list:
+for coil in coil_list:
 
     B4 = pd.read_csv(f"{filepaths.PATH_TO_NEW}{coil}B4.csv")
     B5 = pd.read_csv(f"{filepaths.PATH_TO_NEW}{coil}B5.csv")
@@ -70,7 +70,7 @@ for coil in file_list:
 
     coil_index = df.index[df['coil'] == coil].tolist()
 
-    if len(constrictions) == len(merged_df.difference)
+    if len(constrictions) == len(merged_df.difference):
         df.at[coil_index[0],'Constriction'] = "False"
     elif diff <= -4:
         df.at[coil_index[0],'Constriction'] = "True"
